@@ -12,5 +12,7 @@ Pod::Spec.new do |s|
   s.frameworks		= 'AdSupport', 'Foundation', 'CoreGraphics', 'UIKit', 'WebKit', 'SafariServices'
   s.resource_bundles = {'TaboolaSDKResource' => ['TaboolaSDK.framework/TaboolaSDKResource.bundle/TaboolaSDKResource-Info.plist', 'TaboolaSDK.framework/TaboolaSDKResource.bundle/*.html']}
   s.ios.vendored_frameworks = 'TaboolaSDK.framework'
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
 end
