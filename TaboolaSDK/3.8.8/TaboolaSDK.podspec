@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.homepage            = 'https://www.taboola.com'
   s.license		= { :type => 'Taboola Mobile SDK License', :file => 'LICENSE' }
   s.author              = { 'Taboola' => 'mobile-sdk@taboola.com' }
-  s.platform            = :ios, '9.0'
+  s.platform            = :ios, '11.0'
   s.source            = { :http => 'https://taboola-mobile-sdk.s3-us-west-2.amazonaws.com/ios/3.8.8/TaboolaSDK.zip' }
   s.frameworks		= 'AdSupport', 'Foundation', 'CoreGraphics', 'UIKit', 'WebKit', 'SafariServices'
   s.resource_bundles = {'TaboolaSDKResource' => ['TaboolaSDK.framework/TaboolaSDKResource.bundle/TaboolaSDKResource-Info.plist',
@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
    'TaboolaSDK.framework/TaboolaSDKResource.bundle/*.nib']}
   s.ios.vendored_frameworks = 'TaboolaSDK.framework', 'OMSDK_Taboola.framework'
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'GENERATE_INFOPLIST_FILE' => 'YES' }
 
 end
