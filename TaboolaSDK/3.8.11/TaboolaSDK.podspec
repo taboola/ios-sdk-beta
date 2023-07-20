@@ -8,13 +8,11 @@ Pod::Spec.new do |s|
   s.license		= { :type => 'Taboola Mobile SDK License', :file => 'LICENSE' }
   s.author              = { 'Taboola' => 'mobile-sdk@taboola.com' }
   s.platform            = :ios, '11.0'
-  s.source            = { :http => 'https://taboola-mobile-sdk.s3-us-west-2.amazonaws.com/ios/3.8.11/TaboolaSDK.zip' }
+  s.source            = { :http => 'https://taboola-mobile-sdk.s3.us-west-2.amazonaws.com/ios/spm/3.8.11/TaboolaSDK.xcframework.zip' }
   s.frameworks		= 'AdSupport', 'Foundation', 'CoreGraphics', 'UIKit', 'WebKit', 'SafariServices'
-  s.resource_bundles = {'TaboolaSDKResource' => ['TaboolaSDK.framework/TaboolaSDKResource.bundle/TaboolaSDKResource-Info.plist',
-   'TaboolaSDK.framework/TaboolaSDKResource.bundle/*.html',
-   'TaboolaSDK.framework/TaboolaSDKResource.bundle/*.nib']}
-  s.ios.vendored_frameworks = 'TaboolaSDK.framework', 'OMSDK_Taboola.framework'
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'GENERATE_INFOPLIST_FILE' => 'YES' }
+  s.resource_bundles = {'TaboolaSDKResource' => ['TaboolaSDK.xcframework/TaboolaSDKResource.bundle/TaboolaSDKResource-Info.plist',
+   'TaboolaSDK.xcframework/TaboolaSDKResource.bundle/*.html',
+   'TaboolaSDK.xcframework/TaboolaSDKResource.bundle/*.nib']}
+  s.ios.vendored_frameworks = 'TaboolaSDK.xcframework', 'OMSDK_Taboola.framework'
 
 end

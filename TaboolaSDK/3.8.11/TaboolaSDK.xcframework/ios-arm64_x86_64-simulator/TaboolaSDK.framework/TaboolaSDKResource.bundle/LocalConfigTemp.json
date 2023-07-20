@@ -1,0 +1,44 @@
+{
+    "taboolaConfig": {
+        "configVersion": "1.0",
+        "configVariant": "2|5004|6745",
+        "placementDefault": {},
+        "widget1": {},
+        "homepage": {
+            "homePageStatus": "2",
+            "defaultPlacement": {
+                "overrideShareFunctionlity": "1/0"
+            },
+            "placementsList": {
+                "life": {
+                    "cluster": " | Topic life",
+                    "default": {"color": "black"},
+                    "items":[{
+                        "i": 0,
+                        "overwrite":{"color": "blue"}
+                        },
+                        {
+                        "i":1
+                        },
+                        {
+                        "i":6
+                        }]},
+                "industry": {
+                    "cluster": " | Topic industry",
+                    "default":{"color": "black"},
+                    "items":[{"i":1}, {"i":6}]
+                },
+                "company": {
+                    "cluster": " | Topic company",
+                    "default":{"color": "black"},
+                    "items":[{"i":1}, {"i":6}]
+                },
+                "engagement": {
+                    "cluster": " | Topic engagement",
+                    "default":{"color": "black"},
+                    "items":[{"i":1}, {"i":6}]
+                }
+            }
+        }
+    }
+}
