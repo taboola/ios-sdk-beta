@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.license		= { :type => 'Taboola Mobile SDK License', :file => 'LICENSE' }
   s.author              = { 'Taboola' => 'mobile-sdk@taboola.com' }
   s.platform            = :ios, '11.0'
-  s.source            = { :http => 'https://taboola-mobile-sdk.s3.us-west-2.amazonaws.com/ios/spm/3.8.11/TaboolaSDK.xcframework.zip' }
+  s.source            = { :http => 'https://github.com/taboola/ios-sdk-beta/releases/download/3.8.11/TaboolaSDK.xcframework.zip' }
   s.frameworks		= 'AdSupport', 'Foundation', 'CoreGraphics', 'UIKit', 'WebKit', 'SafariServices'
   s.resource_bundles = {'TaboolaSDKResource' => ['TaboolaSDK.xcframework/TaboolaSDKResource.bundle/TaboolaSDKResource-Info.plist',
    'TaboolaSDK.xcframework/TaboolaSDKResource.bundle/*.html',
