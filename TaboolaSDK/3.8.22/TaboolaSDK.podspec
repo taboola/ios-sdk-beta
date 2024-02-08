@@ -12,4 +12,7 @@ Pod::Spec.new do |s|
   s.frameworks	       	= 'AdSupport', 'Foundation', 'CoreGraphics', 'UIKit', 'WebKit', 'SafariServices'
   s.ios.vendored_frameworks = 'TaboolaSDK.xcframework', 'OMSDK_Taboola.framework'
   s.user_target_xcconfig = { 'GENERATE_INFOPLIST_FILE' => 'YES' }
+  s.prepare_command = <<-CMD.strip_heredoc
+    sed -i '' '/s.user_target_xcconfig = { 'GENERATE_INFOPLIST_FILE' => 'YES' }/d' #{s.name}.podspec
+    CMD
 end
