@@ -8,11 +8,7 @@ Pod::Spec.new do |s|
   s.license		          = { :type => 'Taboola Mobile SDK License', :file => 'LICENSE' }
   s.author              = { 'Taboola' => 'mobile-sdk@taboola.com' }
   s.platform            = :ios, '11.0'
-  s.source              = { :http => 'https://taboola-mobile-sdk.s3-us-west-2.amazonaws.com/ios/sdk-binaries/xcframework/beta/3.8.22/beta-3/TaboolaSDK.xcframework.zip' }
+  s.source              = { :http => 'https://taboola-mobile-sdk.s3-us-west-2.amazonaws.com/ios/sdk-binaries/xcframework/beta/3.8.22/beta-4/TaboolaSDK.xcframework.zip' }
   s.frameworks	       	= 'AdSupport', 'Foundation', 'CoreGraphics', 'UIKit', 'WebKit', 'SafariServices'
   s.ios.vendored_frameworks = 'TaboolaSDK.xcframework', 'OMSDK_Taboola.framework'
-  s.user_target_xcconfig = { 'GENERATE_INFOPLIST_FILE' => 'YES' }
-  s.prepare_command = <<-CMD.strip_heredoc
-    sed -i '' '/s.user_target_xcconfig = { 'GENERATE_INFOPLIST_FILE' => 'YES' }/d' #{s.name}.podspec
-    CMD
 end
