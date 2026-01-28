@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.author              = { 'Taboola' => 'mobile-sdk@taboola.com' }
   s.platform            = :ios, '11.0'
   s.swift_version       = '5.7.1'
-  s.source              = { :http => 'https://taboola-mobile-sdk.s3-us-west-2.amazonaws.com/ios/sdk-binaries/xcframework/beta/4.1.6/beta-3/TaboolaSDK.xcframework.zip' }
+  s.source              = { :http => 'https://taboola-mobile-sdk.s3-us-west-2.amazonaws.com/ios/sdk-binaries/xcframework/beta/4.1.6/beta-4/TaboolaSDK.xcframework.zip' }
   s.frameworks	       	= 'AdSupport', 'Foundation', 'CoreGraphics', 'UIKit', 'WebKit', 'SafariServices'
   s.ios.vendored_frameworks = 'TaboolaSDK.xcframework', 'OMSDK_Taboola.framework'
 end
